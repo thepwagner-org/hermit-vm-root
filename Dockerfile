@@ -7,7 +7,7 @@ RUN update-ca-certificates && \
 COPY . .
 RUN go build -o /guest ./cmd
 
-FROM debian:bullseye-slim@sha256:e3ed4be20c22a1358020358331d177aa2860632f25b21681d79204ace20455a6
+FROM debian:bullseye-slim@sha256:dddc0f5f01db7ca3599fd8cf9821ffc4d09ec9d7d15e49019e73228ac1eee7f9
 
 # Install an init system and minimize footprint:
 RUN apt-get update && \
