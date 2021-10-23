@@ -1,0 +1,21 @@
+rules:
+  - pattern: "auth.docker.io/.*"
+    action: NO_STORE
+  - pattern: "registry-1.docker.io/v2/library/debian/.*"
+    action: ALLOW
+  - pattern: "registry-1.docker.io/v2/library/golang/.*"
+    action: ALLOW
+  - pattern: "deb.debian.org/debian.*/InRelease"
+    action: REFRESH
+  - pattern: "deb.debian.org/debian.*"
+    action: ALLOW
+  - pattern: "security.debian.org/debian-security.*/InRelease"
+    action: REFRESH
+  - pattern: "security.debian.org/debian-security.*"
+    action: ALLOW
+  - pattern: "proxy.golang.org/.*"
+    action: ALLOW
+  - pattern: "github.com/opencontainers/runc/releases/.*"
+    action: ALLOW
+  - pattern: "github.com/moby/buildkit/releases/.*"
+    action: ALLOW
