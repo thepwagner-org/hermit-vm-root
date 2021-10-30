@@ -1,8 +1,8 @@
 security.debian.org/debian-security/dists/bullseye-security/InRelease:
     responseCode: 200
     contentLength: 44101
-    sha256: 59d2f4c8fc6972a0e0a4ef5992e93a5641062c8fa5c3ccb843210801af708026
-    shake256: 2e75d8f072d81713ee8a934289b65b610a7c9d0ecaa4cff92185498c6786ba07a45eb048a68642c02bfb60cbf7d5f0b97f52d31949acc9b5397c7869451edb05
+    sha256: 524ece43e54062a8a3328d4c4b7a39bb3f2e8f7d37ddca9b3ccec9ce85319b77
+    shake256: a463957fe3239eeaf5f04b29e5827828432f9036872555bdad9fd41ebb3287a45903e58ec0419f007e4ef383a86cc378dbf7d5fe042b6e95bc39f069882c3430
 ? security.debian.org/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/f9cf0e17e69d4215c6d951d30f14e69c55c112300d7359ab5f13e553dc12b918
 :   responseCode: 200
     contentLength: 77184
