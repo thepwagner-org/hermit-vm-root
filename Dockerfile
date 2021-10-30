@@ -70,3 +70,4 @@ RUN systemctl enable guestbuild.service
 RUN systemctl mask serial-getty@ttyS0.service
 
 COPY --from=builder /guest /usr/local/bin/guest
+
