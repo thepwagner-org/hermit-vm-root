@@ -31,16 +31,16 @@ RUN systemctl mask getty@tty1.service && \
   echo "hermit-sandbox" > /etc/hostname
 
 # renovate: datasource=github-releases depName=opencontainers/runc versioning=semver
-ARG RUNC_VERSION="v1.0.2"
-ARG RUNC_CHECKSUM="44d1ba01a286aaf0b31b4be9c6abc20deab0653d44ecb0d93b4d0d20eac3e0b6"
+ARG RUNC_VERSION=v1.0.2
+ARG RUNC_CHECKSUM=44d1ba01a286aaf0b31b4be9c6abc20deab0653d44ecb0d93b4d0d20eac3e0b6
 
 RUN curl -Lo /usr/local/bin/runc "https://github.com/opencontainers/runc/releases/download/${RUNC_VERSION}/runc.amd64" && \
     echo "${RUNC_CHECKSUM}  /usr/local/bin/runc" | sha256sum -c - && \
     chmod +x /usr/local/bin/runc
 
 # renovate: datasource=github-releases depName=moby/buildkit versioning=semver
-ARG BUILDKIT_VERSION="v0.9.0"
-ARG BUILDKIT_CHECKSUM="1b307268735c8f8e68b55781a6f4c03af38acc1bc29ba39ebaec6d422bccfb25"
+ARG BUILDKIT_VERSION=v0.9.0
+ARG BUILDKIT_CHECKSUM=1b307268735c8f8e68b55781a6f4c03af38acc1bc29ba39ebaec6d422bccfb25
 
 RUN curl -Lo /tmp/buildkit.tgz "https://github.com/moby/buildkit/releases/download/${BUILDKIT_VERSION}/buildkit-${BUILDKIT_VERSION}.linux-amd64.tar.gz" && \
     echo "${BUILDKIT_CHECKSUM}  /tmp/buildkit.tgz" | sha256sum -c - && \
