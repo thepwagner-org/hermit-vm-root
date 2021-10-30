@@ -39,8 +39,8 @@ RUN curl -Lo /usr/local/bin/runc "https://github.com/opencontainers/runc/release
     chmod +x /usr/local/bin/runc
 
 # renovate: datasource=github-releases depName=moby/buildkit versioning=semver
-ARG BUILDKIT_VERSION=v0.9.0
-ARG BUILDKIT_CHECKSUM=1b307268735c8f8e68b55781a6f4c03af38acc1bc29ba39ebaec6d422bccfb25
+ARG BUILDKIT_VERSION=v0.9.1
+ARG BUILDKIT_CHECKSUM=f5c82431fb9e672e1f900b5623433fb4d477e80e16ca4c836d42594312e927a2
 
 RUN curl -Lo /tmp/buildkit.tgz "https://github.com/moby/buildkit/releases/download/${BUILDKIT_VERSION}/buildkit-${BUILDKIT_VERSION}.linux-amd64.tar.gz" && \
     echo "${BUILDKIT_CHECKSUM}  /tmp/buildkit.tgz" | sha256sum -c - && \
@@ -70,3 +70,4 @@ RUN systemctl enable guestbuild.service
 RUN systemctl mask serial-getty@ttyS0.service
 
 COPY --from=builder /guest /usr/local/bin/guest
+
