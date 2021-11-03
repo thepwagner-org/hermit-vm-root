@@ -6,7 +6,7 @@ require (
 	github.com/go-logr/logr v1.2.0
 	github.com/go-logr/zerologr v1.2.0
 	github.com/mdlayher/vsock v0.0.0-20210303205602-10d591861736
-	github.com/moby/buildkit v0.9.1
+	github.com/moby/buildkit v0.9.2
 	github.com/rs/zerolog v1.26.0
 	github.com/spf13/cobra v1.2.1
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
