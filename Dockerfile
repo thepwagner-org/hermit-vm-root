@@ -1,6 +1,7 @@
 FROM golang:1.17.2@sha256:124966f5d54a41317ee81ccfe5f849d4f0deef4ed3c5c32c20be855c51c15027 AS builder
 WORKDIR /app
 ARG GONOSUMDB=*
+ARG GOPRIVATE=*
 COPY go.mod go.sum /app/
 RUN update-ca-certificates && \
   go mod download
