@@ -13,14 +13,7 @@ rules:
     action: REFRESH
   - pattern: "security.debian.org/debian-security.*"
     action: ALLOW
-  # Very permissive rules for go modules:
-  - pattern: "golang.org/x/.*"
+  - pattern: "github.com/opencontainers/runc/releases/.*"
     action: ALLOW
-  - pattern: "google.golang.org/.*"
-    action: ALLOW
-  - pattern: "go.opentelemetry.io/.*"
-    action: ALLOW
-  - pattern: "go.opentelemetry.io/.*"
-    action: ALLOW
-  - pattern: "github.com/.*"
+  - pattern: "github.com/moby/buildkit/releases/.*"
     action: ALLOW
