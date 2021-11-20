@@ -1,4 +1,4 @@
-FROM golang:1.17.2@sha256:124966f5d54a41317ee81ccfe5f849d4f0deef4ed3c5c32c20be855c51c15027 AS builder
+FROM golang:1.17.3@sha256:4f0671cf24397b6f98013bfc47882d4299573639c3714825297ddbd4b621ee92 AS builder
 WORKDIR /app
 COPY . .
 RUN go build -mod=vendor -o /guest ./cmd
