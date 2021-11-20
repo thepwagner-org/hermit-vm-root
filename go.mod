@@ -6,7 +6,7 @@ require (
 	github.com/go-logr/logr v1.2.0
 	github.com/go-logr/zerologr v1.2.0
 	github.com/mdlayher/vsock v0.0.0-20210303205602-10d591861736
-	github.com/moby/buildkit v0.9.2
+	github.com/moby/buildkit v0.9.3
 	github.com/rs/zerolog v1.26.0
 	github.com/spf13/cobra v1.2.1
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
@@ -16,9 +16,9 @@ require (
 	github.com/Microsoft/go-winio v0.4.17 // indirect
 	github.com/agext/levenshtein v1.2.3 // indirect
 	github.com/containerd/console v1.0.2 // indirect
-	github.com/containerd/containerd v1.5.3 // indirect
+	github.com/containerd/containerd v1.5.8 // indirect
 	github.com/containerd/continuity v0.1.0 // indirect
-	github.com/containerd/ttrpc v1.0.2 // indirect
+	github.com/containerd/ttrpc v1.1.0 // indirect
 	github.com/containerd/typeurl v1.0.2 // indirect
 	github.com/docker/distribution v2.7.1+incompatible // indirect
 	github.com/docker/docker v20.10.7+incompatible // indirect
@@ -58,5 +58,5 @@ require (
 	golang.org/x/time v0.0.0-20200630173020-3af7569d3a1e // indirect
 	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c // indirect
 	google.golang.org/grpc v1.38.0 // indirect
-	google.golang.org/protobuf v1.26.0 // indirect
+	google.golang.org/protobuf v1.27.1 // indirect
 )
