@@ -1,11 +1,7 @@
 FROM golang:1.17.2@sha256:124966f5d54a41317ee81ccfe5f849d4f0deef4ed3c5c32c20be855c51c15027 AS builder
 WORKDIR /app
-ARG GONOSUMDB=*
-COPY go.mod go.sum /app/
-RUN update-ca-certificates && \
-  go mod download
 COPY . .
-RUN go build -o /guest ./cmd
+RUN go build -mod=vendor -o /guest ./cmd
 
 FROM debian:bullseye-slim@sha256:a23887a2e830b815955e010f30d4c2430cd5ef82e93c130471024bc9f808d5d3
 
