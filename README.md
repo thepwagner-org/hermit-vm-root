@@ -9,6 +9,6 @@ It is what guest virtual machines boot, so should have all the features you want
 
 This implementation is orchestrated by systemd:
 
-* `guestproxy.service` - a golang TCP proxy that forwards connections to the VSOCK proxy
+* `guestproxy.service` - a golang TCP proxy that forwards connections to the VSOCK proxy.
 * `buildkit.service` - [buildkitd](https://github.com/moby/buildkit) to assemble container images.
 * `guestbuild.service` - a golang helper that assembles the container from sources on the input volume to a tarball on the output volume.
