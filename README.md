@@ -1,4 +1,4 @@
-# hermit-guest-root
+# hermit-vm-root
 
 This is the root filesystem used by [hermit-ci](https://github.com/thepwagner/hermit), based on [debian/stable](https://packages.debian.org/stable/).
 
