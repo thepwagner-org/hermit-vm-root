@@ -1,23 +1,23 @@
 deb.debian.org/debian/dists/bullseye-updates/InRelease:
     responseCode: 200
     contentLength: 39353
-    sha256: 8baea1b10f3bfc7791fe389e2144ae0cecabf9f182d19eade541bb39ac8fd4df
-    shake256: 27b7c71b9cef33a5d9e09dd9a862abc905454b619eb066c9f4f222fdcdd5324290403f770fdb0d3a2212d9dfe72e0aa2cf80771aac2bae53f68bb348a4ef4070
-? deb.debian.org/debian/dists/bullseye-updates/main/binary-amd64/by-hash/SHA256/0371261a6f2b14d136bebd8057f886e00b60edf7db27bca86a12bcbd049ac09c
+    sha256: 6819a241f623c19c35359a8b976d65b9011fb5b0bb5d7ac138f83ce1c1c39e2f
+    shake256: f615cddc0fc33ab9a9397d49a23263daa91aa57b2496ff9bae31f1a1e7e9510a347b96657aec33c46390697ebc22a930e0d3fe7e3c3c24880f5c21ff9c6d170d
+? deb.debian.org/debian/dists/bullseye-updates/main/binary-amd64/by-hash/SHA256/1b157e478f2893e776e86182c487e8a90a88337420e433d617d516f3d44aaa4e
 :   responseCode: 200
-    contentLength: 2592
-    sha256: 0371261a6f2b14d136bebd8057f886e00b60edf7db27bca86a12bcbd049ac09c
-    shake256: ba3c304923399943cbf2d016f743bfda47727ce4088c1948f06620c54961ee15d0545a17e1cec4edc396291ebd6a1984decbcd1243d792b80a12577c28e475c9
+    contentLength: 2596
+    sha256: 1b157e478f2893e776e86182c487e8a90a88337420e433d617d516f3d44aaa4e
+    shake256: bc54271744a7665bb4bd14cd9712840707326f4c55963164f617dfaf1f21a4564385c3808d2f497b6f87e4f478b7215eb13d723e9af4baf29d3a40341c954ac3
 deb.debian.org/debian/dists/bullseye/InRelease:
     responseCode: 200
-    contentLength: 115945
-    sha256: ac0750571305f7a531bae7489216a053f9a02befb6bfbb356ddd5a4e95840b17
-    shake256: 6eb20c2f9753dc5d30d4307efb616bd37d19920696776704ce2730bce013f89b3dd945db7f289a8ee0aa80896143eed549d72c4830d9af4511dceaf7c50c7227
-? deb.debian.org/debian/dists/bullseye/main/binary-amd64/by-hash/SHA256/f9ea21b854a4212513001d30bfa5c6579e35b3a6dd48d6cc376f2296219c14ed
+    contentLength: 115946
+    sha256: aa0d53f69b384e60088a2363558a49561258f62fac1662fb0f1dea4a4325af66
+    shake256: 4701b3131a5bb3bac0caca2371428c6cf77280750f3810e1655c2ebed038434cf8f9df33548c8794666470e534763393d8bd8b37126d9b419d4b540b155da978
+? deb.debian.org/debian/dists/bullseye/main/binary-amd64/by-hash/SHA256/6d5509534097dd37bbcc2ed7bb18e117511395ac3812562abbe019b64071e1bf
 :   responseCode: 200
-    contentLength: 8179992
-    sha256: f9ea21b854a4212513001d30bfa5c6579e35b3a6dd48d6cc376f2296219c14ed
-    shake256: 03eb7f93a50d0110bf5ed26a3ab323fb6a969c68a706a5972061de58d10f4dc002ecc43e97085dd475acc421e51a7dc9f630c39386f37fd06a323c7403fa2695
+    contentLength: 8183088
+    sha256: 6d5509534097dd37bbcc2ed7bb18e117511395ac3812562abbe019b64071e1bf
+    shake256: 667769d1837da6d86e2d9d73d6876639cc4c2b317203c7528e386136b825a497bb1732269cc54bf950d270f5940f71e50ad7fe2340914138395fd859d074812e
 deb.debian.org/debian/pool/main/a/apparmor/apparmor_2.13.6-10_amd64.deb:
     responseCode: 200
     contentType: application/x-debian-package
@@ -60,42 +60,18 @@ deb.debian.org/debian/pool/main/c/cpio/cpio_2.13+dfsg-4_amd64.deb:
     contentLength: 244144
     sha256: 34071be88dae063892af8818eec2532a19b4ea09c45efd4e9973de4c4d88ccb7
     shake256: 9e7fe38fca1ba8cd836d2f415c770debef377567a4f0626f5f63fab51eb379dead313531d414501ff95141ba72503915118200dc452b139d7874e4330b16aea8
-deb.debian.org/debian/pool/main/c/cryptsetup/libcryptsetup12_2.3.5-1_amd64.deb:
+deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3+deb11u1_amd64.deb:
     responseCode: 200
     contentType: application/x-debian-package
-    contentLength: 244000
-    sha256: 2376371bccccdfa72ba828425dfe9f2b7fe65a63f32d106471aaeced17dff21c
-    shake256: b4eeb3dbfde0e2f6b77d7f2945966c0123dd8248d27558fb8840fb2109b8b941b1b3a9f1c33a91c3674b581880c2f8aeb2f594331ffe73f4bb8dcf5ef1dc93b3
-deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3+b1_amd64.deb:
+    contentLength: 266868
+    sha256: f2e09a43aa07a44d605e2949f8c2cb5f5c92f470848e178690421e0f697ba25a
+    shake256: f66a4975f892fa0f5e02f58a49e3c048a3d82f42f1e18a65f84c4b95486f3198cc483505620f14103f835affce53b9879ed0c5aac0975b7479a92c283ead8bf0
+deb.debian.org/debian/pool/main/c/curl/libcurl4_7.74.0-1.3+deb11u1_amd64.deb:
     responseCode: 200
     contentType: application/x-debian-package
-    contentLength: 267192
-    sha256: 6d348b9e3ab65f27276e5591995129e8c0e3d14ee084292abc6e74c459063725
-    shake256: 708b4a000d01933ffd9e18fcb88af519f6f40a7c6a86c0492857474583ca8e8262fd59fdd0a2f0308bf6278c5fc98dea9a0a0fcb3db365c1ab1e9bd3a043d955
-deb.debian.org/debian/pool/main/c/curl/libcurl4_7.74.0-1.3+b1_amd64.deb:
-    responseCode: 200
-    contentType: application/x-debian-package
-    contentLength: 341228
-    sha256: 4e1375d61363d292d89a1528a2dd43de23dfc2c1ae984b121ef24fe5ba2cd7c1
-    shake256: b2ff836212f5b0990e6e28b2a240bc21d7210304d8d9939eed30f70a331ffe023dbffecb5be0014e1ff757055f26d8d40d1ec45575b8aefb8d15a280efa49b98
-deb.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-2_2.1.27+dfsg-2.1_amd64.deb:
-    responseCode: 200
-    contentType: application/x-debian-package
-    contentLength: 105900
-    sha256: ef69559746c4491d0d3bf714ae15bce1fd3d13eb72f841ccd753133832c42298
-    shake256: ffff58b7d118cd3881a237e2741f2a44eaf6efa04e56060edee85aefd80d88d6dfea3fa800f3bc15507f583426b7909236360c797787d07b7b94029ce6e8b3cb
-deb.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.27+dfsg-2.1_amd64.deb:
-    responseCode: 200
-    contentType: application/x-debian-package
-    contentLength: 69052
-    sha256: 155806d63243f7c783a925730957d011b191f2d863dce97c4399217f876992b2
-    shake256: f519bbaaeebe12dc3ad7f77d85032b8b2e11770861e6426065712361026a68382450ab237ee3b2e59bf70933fcae2879a91fce6f19b4ed3e934b39be02a6bff8
-deb.debian.org/debian/pool/main/c/cyrus-sasl2/libsasl2-modules_2.1.27+dfsg-2.1_amd64.deb:
-    responseCode: 200
-    contentType: application/x-debian-package
-    contentLength: 103700
-    sha256: 2e3230d9ab85eef8dfb049d977600eda11b5d30d99bc3f0be6c413d8edac99b9
-    shake256: ed502acc1a895670d051a6481dd6d760b3af901052dc7641f11c709fb621514f6fec7791251e8e70461c9b1d631d743a5b03b9a1c503fb81dccc5731cbf5e15d
+    contentLength: 341280
+    sha256: 6f9c494eecc920899bb2c72d1a507a34b3703105778b0b9b9ae9aebdbdffcaab
+    shake256: 960e8733066e33340ca67b8004badc8f9864fc665f2754483ae7d14a9db635ff80dea5abe5e3eab20ba560b655d33ced2740657bcc46b2de13387a992e73f5b8
 deb.debian.org/debian/pool/main/d/dbus/dbus_1.12.20-2_amd64.deb:
     responseCode: 200
     contentType: application/x-debian-package
@@ -108,12 +84,6 @@ deb.debian.org/debian/pool/main/d/dbus/libdbus-1-3_1.12.20-2_amd64.deb:
     contentLength: 218776
     sha256: 7256dfeda88461e6fccbf98372d3ec29487b3b2d0ae5d145a3332ab35274f0da
     shake256: 3235fd6c048cccc7a13893b74e37f359fa903d4499788ff650313e53600c6e2fe5e87c68acfb26dc42edc67a2fa165b3bddc2032aa7de0a3a71fd57adb9b6bef
-deb.debian.org/debian/pool/main/e/expat/libexpat1_2.2.10-2_amd64.deb:
-    responseCode: 200
-    contentType: application/x-debian-package
-    contentLength: 96904
-    sha256: eda6663f34375a9456c8c701002f1271bc90ac2627b9fb0892474e65eae1b668
-    shake256: ea2b4b38799ae90c980b7558a82e453b0c78c248b86260f51444c56fbd4332df81454301710406fd68769fca13d19636f4bc89262640913d205215b241aa1eba
 deb.debian.org/debian/pool/main/f/firmware-free/firmware-linux-free_20200122-1_all.deb:
     responseCode: 200
     contentType: application/x-debian-package
@@ -174,18 +144,6 @@ deb.debian.org/debian/pool/main/l/linux-base/linux-base_4.6_all.deb:
     contentLength: 32384
     sha256: 5fa6a64c4184ffa958f8ca13d10922333ff0adaf9f9e0d819ed56f5f69872620
     shake256: 99612668017daece833fb047d2a5dcdaac34ed155b02b87d6662c46810631ad558ad6542c0d23f25b7f1b6cf80ebc3a95e763e5a02d0e47e7f2c2cdb350c3866
-deb.debian.org/debian/pool/main/l/linux-signed-amd64/linux-image-5.10.0-9-amd64_5.10.70-1_amd64.deb:
-    responseCode: 200
-    contentType: application/x-debian-package
-    contentLength: 53650548
-    sha256: dc8bbe5b14088deba2231f316de341639ef1133445f120c83be60eba974eedd7
-    shake256: 05ffca5249a14574d86bc9f628640435ecb24cbc541727318379237aac5c736cc0453f4aaa94feb0f5902e7bc85025e58bcd53a02cf461775c8e82540872a75d
-deb.debian.org/debian/pool/main/l/linux-signed-amd64/linux-image-amd64_5.10.70-1_amd64.deb:
-    responseCode: 200
-    contentType: application/x-debian-package
-    contentLength: 1476
-    sha256: e379b900bb610b0468d62a39e1fd838c66905e12440934f434743232d1010fc7
-    shake256: 2e8edae4f9d39a196a273ec902a3404c645a27039e76a9e30613f9b003e1542cb7c596a86b7d35c69eac1f0ef207c7f79de92ad2b6761abf60a6fbae8e092d43
 deb.debian.org/debian/pool/main/l/lvm2/dmsetup_1.02.175-2.1_amd64.deb:
     responseCode: 200
     contentType: application/x-debian-package
@@ -246,12 +204,12 @@ deb.debian.org/debian/pool/main/p/pigz/pigz_2.6-1_amd64.deb:
     contentLength: 64000
     sha256: 54a51198fca4e6eae44371277c525d3b7371cc969cd97e9f10ea6efc13acaf1a
     shake256: 7a3012ff5d01d1e4968c32bbcc9b117405fb50c9e60ccf15d71c9a787fd74db765288135c6d528c034533a13ce64d46f6e9c725116de95b0997697bf4b0eb12f
-deb.debian.org/debian/pool/main/p/publicsuffix/publicsuffix_20210108.1309-1_all.deb:
+deb.debian.org/debian/pool/main/p/publicsuffix/publicsuffix_20211207.1025-0+deb11u1_all.deb:
     responseCode: 200
     contentType: application/x-debian-package
-    contentLength: 121276
-    sha256: c8fd5aa501c8b90ee8ecde5365e8f3f6bf45472d7a774762879da3c5e7ccf5f0
-    shake256: 9fc70cd2115c48732bb884898aaab65934c596e752acd9b507bc92b35a4aaf69be348ba4466a7cda28dc0f8574be046e650765b3af2c7eaef915fabfcc364518
+    contentLength: 125016
+    sha256: 9f6e896325b284810bdf507c008e2d4393aed7885b8757caf544b0ece5ba14cc
+    shake256: fbcda0790d08e4fda0f5e8da80a4cc94ab3841e74cef8c57c8956196c84fdcd1b3e16f37985eea0bf813fdc1b1899e796787fe6433c1d4d2ed71f1a7b2dfe22d
 deb.debian.org/debian/pool/main/r/rtmpdump/librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb:
     responseCode: 200
     contentType: application/x-debian-package

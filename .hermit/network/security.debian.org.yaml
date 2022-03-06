@@ -1,10 +1,52 @@
 security.debian.org/debian-security/dists/bullseye-security/InRelease:
     responseCode: 200
-    contentLength: 44097
-    sha256: 95d10ceaa1c49ad0a44e909be1628d38afce5df79dd5c0c856e58b42ffd5070a
-    shake256: d4c2fd91144b40b8059157b7199c5e04b884e3948a7983dcaff63ac1c695074e988974ffad81f33dd6d698f57c46e496919aae52bbbb4291e3f85c5901ea51b9
-? security.debian.org/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/38afa6ff515f258081b1a4c1d4e876b252e1163f7e451874de89a9f180c16fcd
+    contentLength: 44101
+    sha256: 94ed79ca1585ab3cfe2d905964fc1471ca4fd4440dc2fa5c6da33f361e287797
+    shake256: 5b9f47ae34b93373704dcad7a58900ab6e2ae60848e1c184d32f3bcbcfa1cdc3e070006f84092a935429402b91b60294964bb57731a9d4563f02ee6066756446
+? security.debian.org/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/b084bf5c74fbd64dafdfb3f602102b9fde001997af1f748cbc5a014ca96974a7
 :   responseCode: 200
-    contentLength: 97128
-    sha256: 38afa6ff515f258081b1a4c1d4e876b252e1163f7e451874de89a9f180c16fcd
-    shake256: 17d2b6f0b82d81435067740f8f7e737da1d1522c6a2b2aa826ceea3737b02ffe5cd7d1d162ac4ba175ac78a6240fba33d2209b0cf3b998702397c0093e7443ec
+    contentLength: 120172
+    sha256: b084bf5c74fbd64dafdfb3f602102b9fde001997af1f748cbc5a014ca96974a7
+    shake256: 66310ea93cfe624d19da3408b72cc7fa026b94d7a47e39b6efe741e920efafc53ee8660d9695c1d16a23231aa48fb504703b4efa48ea081375e58b485a2507da
+security.debian.org/debian-security/pool/updates/main/c/cryptsetup/libcryptsetup12_2.3.7-1+deb11u1_amd64.deb:
+    responseCode: 200
+    contentType: application/x-debian-package
+    contentLength: 248428
+    sha256: f002372b5329a2d3b3fa79f0506f48a5ddd52168fa6e7466c4638f7d9ccdf45c
+    shake256: 5a5d8db0d29b1b68c68603deafbcf76d882a5032c6751f97cbebfd7ae1316cdbd424ef80e554523e03b0deee562fc012497d2984cf48ad65d7971e47a3b0e96a
+security.debian.org/debian-security/pool/updates/main/c/cyrus-sasl2/libsasl2-2_2.1.27+dfsg-2.1+deb11u1_amd64.deb:
+    responseCode: 200
+    contentType: application/x-debian-package
+    contentLength: 105940
+    sha256: 2e86ab7a3329aad4b7350a9b067fe8f80b680302f2f82d94f73f9bf075404460
+    shake256: 021ef84d7fde2cb9877f6449ff3a8ddec25502e3277412aa027a087b6fac437af8e931a5d5fcaf1846734393e01c74ab97f73bca5a882688ebf69ecb334189db
+security.debian.org/debian-security/pool/updates/main/c/cyrus-sasl2/libsasl2-modules-db_2.1.27+dfsg-2.1+deb11u1_amd64.deb:
+    responseCode: 200
+    contentType: application/x-debian-package
+    contentLength: 69148
+    sha256: 122bf3de4ca0ec873bc35bdde1f21ec9d91ace4f5245c3b1240e077f866e1ae9
+    shake256: f02dbd2973c925925e5836bbd7e2d02c9729e60ffaa04968c775e2b89d288a737cb8f72579c399ec9548cbc0628fe27f2beaaad00f2e095b75222b0f8342e381
+security.debian.org/debian-security/pool/updates/main/c/cyrus-sasl2/libsasl2-modules_2.1.27+dfsg-2.1+deb11u1_amd64.deb:
+    responseCode: 200
+    contentType: application/x-debian-package
+    contentLength: 103708
+    sha256: a4759df79c9e7e7cd9555112e3396b5c5d9198e6b8b6622bfd70672291370f46
+    shake256: 45427adf02d8462ca267d3c27623e7a43cd3eb8620e3753b13a7cdb1f257b94451123c9d721d021ad64c7a5f83f77f1e63abd95a85ab5523a0612ba3952f517b
+security.debian.org/debian-security/pool/updates/main/e/expat/libexpat1_2.2.10-2+deb11u2_amd64.deb:
+    responseCode: 200
+    contentType: application/x-debian-package
+    contentLength: 98192
+    sha256: 9199411e2d136efdd9ec9c97f3ffa3de63c201b953b17e91f6090a7f6aef0eb7
+    shake256: 99892909cc72b93e45e99332462f3730ee7328b888860e77fea570c4f595cf811fa061ce68d4f8b26ae0420e91454071836c80cace74cb6d3873bab822702ee5
+security.debian.org/debian-security/pool/updates/main/l/linux-signed-amd64/linux-image-5.10.0-11-amd64_5.10.92-1_amd64.deb:
+    responseCode: 200
+    contentType: application/x-debian-package
+    contentLength: 53709020
+    sha256: 4e0866fe909080a8540d430767af86b97c748df8d7614d8d27557cce35c6c94a
+    shake256: 12c1e181db7438158808f0a0ec0b2809920051fb7dab42bcdf39bb6657ef835fb8eb644e06fb4b781d69aeef71b68686e9cb554cbd4d5f838676b2fd517730a8
+security.debian.org/debian-security/pool/updates/main/l/linux-signed-amd64/linux-image-amd64_5.10.92-1_amd64.deb:
+    responseCode: 200
+    contentType: application/x-debian-package
+    contentLength: 1476
+    sha256: d245bd3f9441674de268eb6048ac7f2d72f801763b607b3afecad0eada3f8cd7
+    shake256: 9cb1328b24860167426220e365e0b5d5854db39e64707ee636f000b2b0c5e79f7b943f859caefc3053b996c92a7e603685c8b0c2588d9a79ced35de21528ecc7
