@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 RUN go build -mod=vendor -o /guest ./cmd
 
-FROM debian:bullseye-slim@sha256:a23887a2e830b815955e010f30d4c2430cd5ef82e93c130471024bc9f808d5d3
+FROM debian:bullseye-slim@sha256:d5cd7e54530a8523168473a2dcc30215f2c863bfa71e09f77f58a085c419155b
 
 # Install an init system and minimize footprint:
 RUN apt-get update && \
