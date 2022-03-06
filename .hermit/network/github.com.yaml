@@ -4,9 +4,9 @@ github.com/moby/buildkit/releases/download/v0.9.3/buildkit-v0.9.3.linux-amd64.ta
     contentLength: 47434739
     sha256: f60461abdf2aee8444a4cb0607e4766da3bd503859320819ea8c43fe4a02576c
     shake256: 83ea8dc3fb9ea47183be0f7246177da73d15bc92c512072f1dad3ebed820a1bcfdfcd4a85aea9f5f8fb35042c87396b98d7ea2e325eb9bd1c40284daa142b2f5
-github.com/opencontainers/runc/releases/download/v1.0.2/runc.amd64:
+github.com/opencontainers/runc/releases/download/v1.1.0/runc.amd64:
     responseCode: 200
     contentType: application/octet-stream
-    contentLength: 10051064
-    sha256: 44d1ba01a286aaf0b31b4be9c6abc20deab0653d44ecb0d93b4d0d20eac3e0b6
-    shake256: 5230e3ef09e922d569208a4b19d1f2c9cc63bbae3e4c10cc79af77a043c56a9f4cb4303956d5ddec1e8fc34a0c8470a68266c629c85b9e9ad2850d45bc7ddac8
+    contentLength: 9415040
+    sha256: ab1c67fbcbdddbe481e48a55cf0ef9a86b38b166b5079e0010737fd87d7454bb
+    shake256: 494126ae9fdd40d3e30ae86516998ffd8df74b84ead25f9d18d1f5ea0d73ce8633e1bbea3a031e4b731e802f802a484b9791ed5213ac2950d43004e418b05b24
