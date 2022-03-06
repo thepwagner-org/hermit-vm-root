@@ -3,7 +3,7 @@ module github.com/thepwagner-org/hermit-root
 go 1.17
 
 require (
-	github.com/go-logr/logr v1.2.0
+	github.com/go-logr/logr v1.2.2
 	github.com/go-logr/zerologr v1.2.1
 	github.com/mdlayher/vsock v0.0.0-20210303205602-10d591861736
 	github.com/moby/buildkit v0.9.3
