@@ -38,7 +38,7 @@ var proxyCmd = &cobra.Command{
 }
 
 func handle(log logr.Logger, c net.Conn) {
-	s, err := vsock.Dial(vsockCIDHost, vsockProxyPort)
+	s, err := vsock.Dial(vsockCIDHost, vsockProxyPort, nil)
 	if err != nil {
 		log.Error(err, "opening vsock")
 		return
