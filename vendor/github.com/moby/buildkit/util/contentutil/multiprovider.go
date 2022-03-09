@@ -7,7 +7,7 @@ import (
 	"github.com/containerd/containerd/content"
 	"github.com/containerd/containerd/errdefs"
 	digest "github.com/opencontainers/go-digest"
-	ocispec "github.com/opencontainers/image-spec/specs-go/v1"
+	ocispecs "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/pkg/errors"
 )
 
@@ -26,9 +26,33 @@ type MultiProvider struct {
 	sub  map[digest.Digest]content.Provider
 }
 
-func (mp *MultiProvider) CheckDescriptor(ctx context.Context, desc ocispec.Descriptor) error {
+func (mp *MultiProvider) SnapshotLabels(descs []ocispecs.Descriptor, index int) map[string]string {
+	if len(descs) < index {
+		return nil
+	}
+	desc := descs[index]
+	type snapshotLabels interface {
+		SnapshotLabels([]ocispecs.Descriptor, int) map[string]string
+	}
+
+	mp.mu.RLock()
+	if p, ok := mp.sub[desc.Digest]; ok {
+		mp.mu.RUnlock()
+		if cd, ok := p.(snapshotLabels); ok {
+			return cd.SnapshotLabels(descs, index)
+		}
+	} else {
+		mp.mu.RUnlock()
+	}
+	if cd, ok := mp.base.(snapshotLabels); ok {
+		return cd.SnapshotLabels(descs, index)
+	}
+	return nil
+}
+
+func (mp *MultiProvider) CheckDescriptor(ctx context.Context, desc ocispecs.Descriptor) error {
 	type checkDescriptor interface {
-		CheckDescriptor(context.Context, ocispec.Descriptor) error
+		CheckDescriptor(context.Context, ocispecs.Descriptor) error
 	}
 
 	mp.mu.RLock()
@@ -47,7 +71,7 @@ func (mp *MultiProvider) CheckDescriptor(ctx context.Context, desc ocispec.Descr
 }
 
 // ReaderAt returns a content.ReaderAt
-func (mp *MultiProvider) ReaderAt(ctx context.Context, desc ocispec.Descriptor) (content.ReaderAt, error) {
+func (mp *MultiProvider) ReaderAt(ctx context.Context, desc ocispecs.Descriptor) (content.ReaderAt, error) {
 	mp.mu.RLock()
 	if p, ok := mp.sub[desc.Digest]; ok {
 		mp.mu.RUnlock()

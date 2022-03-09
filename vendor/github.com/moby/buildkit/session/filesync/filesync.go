@@ -64,13 +64,13 @@ func (sp *fsSyncProvider) TarStream(stream FileSync_TarStreamServer) error {
 func (sp *fsSyncProvider) handle(method string, stream grpc.ServerStream) (retErr error) {
 	var pr *protocol
 	for _, p := range supportedProtocols {
-		if method == p.name && isProtoSupported(p.name) {
+		if method == p.name {
 			pr = &p
 			break
 		}
 	}
 	if pr == nil {
-		return errors.New("failed to negotiate protocol")
+		return InvalidSessionError{errors.New("failed to negotiate protocol")}
 	}
 
 	opts, _ := metadata.FromIncomingContext(stream.Context()) // if no metadata continue with empty object
@@ -83,7 +83,7 @@ func (sp *fsSyncProvider) handle(method string, stream grpc.ServerStream) (retEr
 
 	dir, ok := sp.dirs[dirName]
 	if !ok {
-		return status.Errorf(codes.NotFound, "no access allowed to dir %q", dirName)
+		return InvalidSessionError{status.Errorf(codes.NotFound, "no access allowed to dir %q", dirName)}
 	}
 
 	excludes := opts[keyExcludePatterns]
@@ -133,14 +133,6 @@ type protocol struct {
 	recvFn func(stream grpc.ClientStream, destDir string, cu CacheUpdater, progress progressCb, differ fsutil.DiffType, mapFunc func(string, *fstypes.Stat) bool) error
 }
 
-func isProtoSupported(p string) bool {
-	// TODO: this should be removed after testing if stability is confirmed
-	if override := os.Getenv("BUILD_STREAM_PROTOCOL"); override != "" {
-		return strings.EqualFold(p, override)
-	}
-	return true
-}
-
 var supportedProtocols = []protocol{
 	{
 		name:   "diffcopy",
@@ -174,7 +166,7 @@ type CacheUpdater interface {
 func FSSync(ctx context.Context, c session.Caller, opt FSSendRequestOpt) error {
 	var pr *protocol
 	for _, p := range supportedProtocols {
-		if isProtoSupported(p.name) && c.Supports(session.MethodURL(_FileSync_serviceDesc.ServiceName, p.name)) {
+		if c.Supports(session.MethodURL(_FileSync_serviceDesc.ServiceName, p.name)) {
 			pr = &p
 			break
 		}
@@ -324,4 +316,16 @@ func CopyFileWriter(ctx context.Context, md map[string]string, c session.Caller)
 	}
 
 	return newStreamWriter(cc), nil
+}
+
+type InvalidSessionError struct {
+	err error
+}
+
+func (e InvalidSessionError) Error() string {
+	return e.err.Error()
+}
+
+func (e InvalidSessionError) Unwrap() error {
+	return e.err
 }
