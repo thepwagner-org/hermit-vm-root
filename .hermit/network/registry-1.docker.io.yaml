@@ -94,15 +94,15 @@ registry-1.docker.io/v2/library/golang/manifests/sha256:18432b513315c80f80322d4b
     contentLength: 1796
     sha256: 18432b513315c80f80322d4b4743a2d856c8914819ae4191edfed94bc9ad959a
     shake256: 46438c12d2dfdddb0775e3678da1b9eb549b4ddd10656e05e7e83786157817ce42bc16a8723e0feb71f427cb12c5a6be24637302adddc6fb75b59e84a90ac727
+registry-1.docker.io/v2/library/golang/manifests/sha256:c7c94588b6445f5254fbc34df941afa10de04706deb330e62831740c9f0f2030:
+    responseCode: 200
+    contentType: application/vnd.docker.distribution.manifest.list.v2+json
+    contentLength: 2355
+    sha256: c7c94588b6445f5254fbc34df941afa10de04706deb330e62831740c9f0f2030
+    shake256: eea6285cc73c0fcf8d9ce394887976897778aa056422ad5e0fb164dc453e40ab9d1a74a7e0f794eab61cde555656b6cd16f5d47db5b225f86392df5ec1075e2d
 registry-1.docker.io/v2/library/golang/manifests/sha256:c242eebc469a3dc303698d955d49fe303f189b77242153462ff1d2a9e5e691b5:
     responseCode: 200
     contentType: application/vnd.docker.distribution.manifest.v2+json
     contentLength: 1796
     sha256: c242eebc469a3dc303698d955d49fe303f189b77242153462ff1d2a9e5e691b5
     shake256: 700d150c83625451c2866061095f57bb145fa2403e784923fd027d871b15332c4d84517aa6c217d88aece8c6c244d6d9a59acc1e6394a1b16448269c93227d6c
-registry-1.docker.io/v2/library/golang/manifests/sha256:ca709802394f4744685c1ecc083965656c3633799a005e90c75c62cafbaf3cee:
-    responseCode: 200
-    contentType: application/vnd.docker.distribution.manifest.list.v2+json
-    contentLength: 2355
-    sha256: ca709802394f4744685c1ecc083965656c3633799a005e90c75c62cafbaf3cee
-    shake256: e6e086736c578b5371fa63e6bc080c0a57fae4478c586d7dc345de6fcef83197ac8d9cbe48624861945ff71e2e1fe82e1e351a7dad95eb01a30257f9f23b1854
