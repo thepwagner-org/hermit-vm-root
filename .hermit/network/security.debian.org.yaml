@@ -1,13 +1,13 @@
 security.debian.org/debian-security/dists/bullseye-security/InRelease:
     responseCode: 200
     contentLength: 44101
-    sha256: 94ed79ca1585ab3cfe2d905964fc1471ca4fd4440dc2fa5c6da33f361e287797
-    shake256: 5b9f47ae34b93373704dcad7a58900ab6e2ae60848e1c184d32f3bcbcfa1cdc3e070006f84092a935429402b91b60294964bb57731a9d4563f02ee6066756446
-? security.debian.org/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/b084bf5c74fbd64dafdfb3f602102b9fde001997af1f748cbc5a014ca96974a7
+    sha256: 4cf83d2ff7ae763e216efd704b55f1bb2c0cd319f5e028ea08b433ea58527235
+    shake256: 38fe373d957ff89db0b4f7bf880cc5de9f3817a21f969d3d0d76ee783e6fdcab9dbae69b71735c435648e4f5c36ca5de214a510cf65baf0162fcfecc66943d44
+? security.debian.org/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/6fbf819784bcf5d937facea7b3a75011a4bdafc492595b36efd0ba6846ee0739
 :   responseCode: 200
-    contentLength: 120172
-    sha256: b084bf5c74fbd64dafdfb3f602102b9fde001997af1f748cbc5a014ca96974a7
-    shake256: 66310ea93cfe624d19da3408b72cc7fa026b94d7a47e39b6efe741e920efafc53ee8660d9695c1d16a23231aa48fb504703b4efa48ea081375e58b485a2507da
+    contentLength: 121592
+    sha256: 6fbf819784bcf5d937facea7b3a75011a4bdafc492595b36efd0ba6846ee0739
+    shake256: f68d1cee1050ab0e9f0640d9878d1a411fdfe93e6fd856f4419b1fc4ff24a2fbdad66298c2d16b410f028c208995965175f4271dbce7dbb178b4e015edcf12a7
 security.debian.org/debian-security/pool/updates/main/c/cryptsetup/libcryptsetup12_2.3.7-1+deb11u1_amd64.deb:
     responseCode: 200
     contentType: application/x-debian-package
@@ -38,15 +38,15 @@ security.debian.org/debian-security/pool/updates/main/e/expat/libexpat1_2.2.10-2
     contentLength: 98192
     sha256: 9199411e2d136efdd9ec9c97f3ffa3de63c201b953b17e91f6090a7f6aef0eb7
     shake256: 99892909cc72b93e45e99332462f3730ee7328b888860e77fea570c4f595cf811fa061ce68d4f8b26ae0420e91454071836c80cace74cb6d3873bab822702ee5
-security.debian.org/debian-security/pool/updates/main/l/linux-signed-amd64/linux-image-5.10.0-11-amd64_5.10.92-1_amd64.deb:
+security.debian.org/debian-security/pool/updates/main/l/linux-signed-amd64/linux-image-5.10.0-12-amd64_5.10.103-1_amd64.deb:
     responseCode: 200
     contentType: application/x-debian-package
-    contentLength: 53709020
-    sha256: 4e0866fe909080a8540d430767af86b97c748df8d7614d8d27557cce35c6c94a
-    shake256: 12c1e181db7438158808f0a0ec0b2809920051fb7dab42bcdf39bb6657ef835fb8eb644e06fb4b781d69aeef71b68686e9cb554cbd4d5f838676b2fd517730a8
-security.debian.org/debian-security/pool/updates/main/l/linux-signed-amd64/linux-image-amd64_5.10.92-1_amd64.deb:
+    contentLength: 53737152
+    sha256: f849b94cd8c9f49f4e2b281c34c62cc1171e9e00523001619e25d034f25430a2
+    shake256: 312b6e4c5966ab4fa8811da61407f10bc4d0eeb6f082578cba396ce76036ce641c77c6b32ed38d2e8df50f41c9284f120fe51b23d48085c79b290cb0c98075ad
+security.debian.org/debian-security/pool/updates/main/l/linux-signed-amd64/linux-image-amd64_5.10.103-1_amd64.deb:
     responseCode: 200
     contentType: application/x-debian-package
-    contentLength: 1476
-    sha256: d245bd3f9441674de268eb6048ac7f2d72f801763b607b3afecad0eada3f8cd7
-    shake256: 9cb1328b24860167426220e365e0b5d5854db39e64707ee636f000b2b0c5e79f7b943f859caefc3053b996c92a7e603685c8b0c2588d9a79ced35de21528ecc7
+    contentLength: 1484
+    sha256: 769ac3436fa798f1566de0c2961d06adcd5c1524a4b5ae8ed5da5352572e84ba
+    shake256: 4536b4bb2e2d13f0a40f4f6a0d5d296be2521bbb1bf84f529f48c11ad105e5cc626776f1ae4a54c0f743f83ef5c69eeef09cc09df1ee5425d3b224225e44947c
