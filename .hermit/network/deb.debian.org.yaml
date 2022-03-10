@@ -1,8 +1,8 @@
 deb.debian.org/debian/dists/bullseye-updates/InRelease:
     responseCode: 200
     contentLength: 39353
-    sha256: b1a95d4b54283da6076e6c757d361032ebc176a1cbb96207aecf21b9ba9cce4b
-    shake256: 5fc49d236a64c20b97e1811e6ab3f04369dcddc8216adbd5552225940849c3943179ae63b326317d080c9052e8578c86eb2c7e087c181486d6e39aa749db2036
+    sha256: 6af4b8c94908e0201ce8d466ad1f1185e6efd4e74e4cd42e22b992845c16ca51
+    shake256: 29c672ac366c002d00b1649c7e86f3b79ab8cb8326bb5702fa9cb6a2138ad405cfd179ef1cd7076193fd53b6e74c07665b99957e67d0747226cf9a6f438e1ebe
 ? deb.debian.org/debian/dists/bullseye-updates/main/binary-amd64/by-hash/SHA256/1b157e478f2893e776e86182c487e8a90a88337420e433d617d516f3d44aaa4e
 :   responseCode: 200
     contentLength: 2596

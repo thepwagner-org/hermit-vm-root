@@ -1,13 +1,13 @@
 security.debian.org/debian-security/dists/bullseye-security/InRelease:
     responseCode: 200
     contentLength: 44101
-    sha256: 4cf83d2ff7ae763e216efd704b55f1bb2c0cd319f5e028ea08b433ea58527235
-    shake256: 38fe373d957ff89db0b4f7bf880cc5de9f3817a21f969d3d0d76ee783e6fdcab9dbae69b71735c435648e4f5c36ca5de214a510cf65baf0162fcfecc66943d44
-? security.debian.org/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/6fbf819784bcf5d937facea7b3a75011a4bdafc492595b36efd0ba6846ee0739
+    sha256: fb9ad69d4497b85a5f47784e9f185f14f30f6f9e782c81accce0f116f0843675
+    shake256: 9f89c689d0db87f4a77289fc9121e78504e60bce435169789cd5f31daef1f187ce849615fb48c29dca0fcc7061f746a5cc49b0c7c0f5eb2fbefa3433103a71f7
+? security.debian.org/debian-security/dists/bullseye-security/main/binary-amd64/by-hash/SHA256/35f368ecf61a01aebb175f2dd3f2b853d4ff51e4d0a000def18790e2bb9b701e
 :   responseCode: 200
-    contentLength: 121592
-    sha256: 6fbf819784bcf5d937facea7b3a75011a4bdafc492595b36efd0ba6846ee0739
-    shake256: f68d1cee1050ab0e9f0640d9878d1a411fdfe93e6fd856f4419b1fc4ff24a2fbdad66298c2d16b410f028c208995965175f4271dbce7dbb178b4e015edcf12a7
+    contentLength: 121608
+    sha256: 35f368ecf61a01aebb175f2dd3f2b853d4ff51e4d0a000def18790e2bb9b701e
+    shake256: f8e9b0c8666ed90bdc3dbc07ab5296d893873aee345b6a18cbbf1077694665b1c1938e6adbf29c46207837740ce5dc7202fbd628698d53f5605a1ad66f40f658
 security.debian.org/debian-security/pool/updates/main/c/cryptsetup/libcryptsetup12_2.3.7-1+deb11u1_amd64.deb:
     responseCode: 200
     contentType: application/x-debian-package
