@@ -11,7 +11,7 @@ import (
 	"github.com/containerd/containerd/images"
 	"github.com/containerd/containerd/remotes"
 	"github.com/docker/distribution/reference"
-	ocispec "github.com/opencontainers/image-spec/specs-go/v1"
+	ocispecs "github.com/opencontainers/image-spec/specs-go/v1"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/sync/semaphore"
 )
@@ -33,7 +33,7 @@ type req struct {
 	ref string
 }
 
-func (r *req) acquire(ctx context.Context, desc ocispec.Descriptor) (context.Context, func(), error) {
+func (r *req) acquire(ctx context.Context, desc ocispecs.Descriptor) (context.Context, func(), error) {
 	if v := ctx.Value(contextKey); v != nil {
 		return ctx, func() {}, nil
 	}
@@ -90,7 +90,7 @@ func (g *Group) WrapFetcher(f remotes.Fetcher, ref string) remotes.Fetcher {
 func (g *Group) PushHandler(pusher remotes.Pusher, provider content.Provider, ref string) images.HandlerFunc {
 	ph := remotes.PushHandler(pusher, provider)
 	req := g.req(ref)
-	return func(ctx context.Context, desc ocispec.Descriptor) ([]ocispec.Descriptor, error) {
+	return func(ctx context.Context, desc ocispecs.Descriptor) ([]ocispecs.Descriptor, error) {
 		ctx, release, err := req.acquire(ctx, desc)
 		if err != nil {
 			return nil, err
@@ -105,7 +105,7 @@ type fetcher struct {
 	req *req
 }
 
-func (f *fetcher) Fetch(ctx context.Context, desc ocispec.Descriptor) (io.ReadCloser, error) {
+func (f *fetcher) Fetch(ctx context.Context, desc ocispecs.Descriptor) (io.ReadCloser, error) {
 	ctx, release, err := f.req.acquire(ctx, desc)
 	if err != nil {
 		return nil, err

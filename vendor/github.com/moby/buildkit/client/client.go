@@ -26,10 +26,12 @@ import (
 	"go.opentelemetry.io/otel/trace"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
+	"google.golang.org/grpc/credentials/insecure"
 )
 
 type Client struct {
-	conn *grpc.ClientConn
+	conn          *grpc.ClientConn
+	sessionDialer func(ctx context.Context, proto string, meta map[string][]string) (net.Conn, error)
 }
 
 type ClientOpt interface{}
@@ -42,6 +44,7 @@ func New(ctx context.Context, address string, opts ...ClientOpt) (*Client, error
 	}
 	needDialer := true
 	needWithInsecure := true
+	tlsServerName := ""
 
 	var unary []grpc.UnaryClientInterceptor
 	var stream []grpc.StreamClientInterceptor
@@ -49,6 +52,7 @@ func New(ctx context.Context, address string, opts ...ClientOpt) (*Client, error
 	var customTracer bool // allows manually setting disabling tracing even if tracer in context
 	var tracerProvider trace.TracerProvider
 	var tracerDelegate TracerDelegate
+	var sessionDialer func(context.Context, string, map[string][]string) (net.Conn, error)
 
 	for _, o := range opts {
 		if _, ok := o.(*withFailFast); ok {
@@ -61,6 +65,7 @@ func New(ctx context.Context, address string, opts ...ClientOpt) (*Client, error
 			}
 			gopts = append(gopts, opt)
 			needWithInsecure = false
+			tlsServerName = credInfo.ServerName
 		}
 		if wt, ok := o.(*withTracer); ok {
 			customTracer = true
@@ -72,6 +77,9 @@ func New(ctx context.Context, address string, opts ...ClientOpt) (*Client, error
 		}
 		if wt, ok := o.(*withTracerDelegate); ok {
 			tracerDelegate = wt
+		}
+		if sd, ok := o.(*withSessionDialer); ok {
+			sessionDialer = sd.dialer
 		}
 	}
 
@@ -95,20 +103,29 @@ func New(ctx context.Context, address string, opts ...ClientOpt) (*Client, error
 		gopts = append(gopts, grpc.WithContextDialer(dialFn))
 	}
 	if needWithInsecure {
-		gopts = append(gopts, grpc.WithInsecure())
+		gopts = append(gopts, grpc.WithTransportCredentials(insecure.NewCredentials()))
 	}
 	if address == "" {
 		address = appdefaults.Address
 	}
 
-	// grpc-go uses a slightly different naming scheme: https://github.com/grpc/grpc/blob/master/doc/naming.md
-	// This will end up setting rfc non-complient :authority header to address string (e.g. tcp://127.0.0.1:1234).
-	// So, here sets right authority header via WithAuthority DialOption.
-	addressURL, err := url.Parse(address)
-	if err != nil {
-		return nil, err
+	// Setting :authority pseudo header
+	// - HTTP/2 (RFC7540) defines :authority pseudo header includes
+	//   the authority portion of target URI but it must not include
+	//   userinfo part (i.e. url.Host).
+	//   ref: https://datatracker.ietf.org/doc/html/rfc7540#section-8.1.2.3
+	// - However, when TLS specified, grpc-go requires it must match
+	//   with its servername specified for certificate validation.
+	authority := tlsServerName
+	if authority == "" {
+		// authority as hostname from target address
+		uri, err := url.Parse(address)
+		if err != nil {
+			return nil, err
+		}
+		authority = uri.Host
 	}
-	gopts = append(gopts, grpc.WithAuthority(addressURL.Host))
+	gopts = append(gopts, grpc.WithAuthority(authority))
 
 	unary = append(unary, grpcerrors.UnaryClientInterceptor)
 	stream = append(stream, grpcerrors.StreamClientInterceptor)
@@ -131,7 +148,8 @@ func New(ctx context.Context, address string, opts ...ClientOpt) (*Client, error
 	}
 
 	c := &Client{
-		conn: conn,
+		conn:          conn,
+		sessionDialer: sessionDialer,
 	}
 
 	if tracerDelegate != nil {
@@ -242,6 +260,14 @@ func WithTracerDelegate(td TracerDelegate) ClientOpt {
 
 type withTracerDelegate struct {
 	TracerDelegate
+}
+
+func WithSessionDialer(dialer func(context.Context, string, map[string][]string) (net.Conn, error)) ClientOpt {
+	return &withSessionDialer{dialer}
+}
+
+type withSessionDialer struct {
+	dialer func(context.Context, string, map[string][]string) (net.Conn, error)
 }
 
 func resolveDialer(address string) (func(context.Context, string) (net.Conn, error), error) {
