@@ -35,8 +35,8 @@ RUN curl -Lo /usr/local/bin/runc "https://github.com/opencontainers/runc/release
     chmod +x /usr/local/bin/runc
 
 # renovate: datasource=github-releases depName=moby/buildkit versioning=semver
-ARG BUILDKIT_VERSION=v0.9.3
-ARG BUILDKIT_CHECKSUM=f60461abdf2aee8444a4cb0607e4766da3bd503859320819ea8c43fe4a02576c
+ARG BUILDKIT_VERSION=v0.10.0
+ARG BUILDKIT_CHECKSUM=ed9d3942ca3f1cbc4906577a2422e5084416dd2739f3d85b800a129d61557630
 
 RUN curl -Lo /tmp/buildkit.tgz "https://github.com/moby/buildkit/releases/download/${BUILDKIT_VERSION}/buildkit-${BUILDKIT_VERSION}.linux-amd64.tar.gz" && \
     echo "${BUILDKIT_CHECKSUM}  /tmp/buildkit.tgz" | sha256sum -c - && \
